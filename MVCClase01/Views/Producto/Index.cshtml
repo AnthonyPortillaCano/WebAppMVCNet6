@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<p>@DateTime.Now</p>
+@{
+    string  edad = "24";
+}
+<p>Edad:@(edad)</p>
+
+@{
+    var quote = "The future depends on what you do today. - Mahatma Gandhi";
+}
+<p>@quote</p>
+
+@{
+     quote = "Hate cannot drive out hate, only love can do that. - Martin Luther King, Jr";
+}
+
+<p>@quote</p>
+@{
+    void RenderName(string name)
+    {
+        <p>Name:<strong>@name</strong></p>
+    }
+    RenderName("Net 6 Web Application");
+    RenderName("Fullstack Net 6");
+}
+
+@{
+    int value = 1337;
+}
+
+@if(value%2==0)
+{
+    <p>Valor Par</p>
+}
+else if(value>=1337)
+{
+    <p>Este valor es largo</p>
+}
+else
+{
+    <p>El valor esta agregado y es small</p>
+}
+
+@switch(value)
+{
+      case 1:
+        <p>El valor es 1</p>
+        break;
+     case 1337:
+       <p>El valor es 1337</p>
+       break;
+     default:
+         <p>Tu numero no es ni 1 ni 1337</p>
+       break;
+}
